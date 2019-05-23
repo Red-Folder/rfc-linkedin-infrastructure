@@ -4,5 +4,8 @@ steps:
 - task: AzureResourceGroupDeployment@2
   displayName: 'Azure Deployment:Create Or Update Resource Group action on rfc-linkedin-functions'
   inputs:
+    azureSubscription: $(subscriptionId)
+    resourceGroupName: $(name)
+    location: $(location)
     csmFile: template.json
     overrideParameters: '-name $(name) -storageName $(storageName) -location $(location) -subscriptionId $(subscriptionId)'
