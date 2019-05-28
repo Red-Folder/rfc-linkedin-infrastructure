@@ -8,4 +8,4 @@ steps:
     resourceGroupName: $(name)
     location: $(location)
     csmFile: template.json
-    overrideParameters: '-name $(name) -storageName $(storageName) -location "$(location)" -subscriptionId $(subscriptionId)'
+    overrideParameters: '-name $(name) -storageName $(storageName) -location "$(location)" -LinkedInClientId $(LinkedInClientId) -LinkedInClientSecret $(LinkedInClientSecret)'

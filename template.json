@@ -25,6 +25,14 @@
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
                             "value": "[reference('microsoft.insights/components/rfc-linkedin', '2015-05-01').InstrumentationKey]"
+                        },
+                        {
+                            "name": "LinkedInClientId",
+                            "value": "[parameters('LinkedInClientId')]"
+                        },
+                        {
+                            "name": "LinkedInClientSecret",
+                            "value": "[parameters('LinkedInClientSecret')]"
                         }
                     ]
                 },
@@ -70,7 +78,10 @@
         "location": {
             "type": "string"
         },
-        "subscriptionId": {
+        "LinkedInClientId": {
+            "type": "string"
+        },
+        "LinkedInClientSecret": {
             "type": "string"
         }
     },
